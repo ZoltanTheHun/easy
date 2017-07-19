@@ -18,6 +18,7 @@ Some of the features I would like to try out:
 - default Shallow Immutablility
 - mutable keyword can allow mutability 
 - in future true immutable might be introduced with the strict keyword
+- no inheritance, only interfaces
 
 
 This project has a very simple interpreter, that can interpret a .easy file to a .java file, but it is very limited at the moment.
