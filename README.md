@@ -1,6 +1,6 @@
 # easy
 
-easy is a Java based programming language.
+*easy* is a Java based programming language.
 
 The aim of this project is to draft some of the thoughts that I gathered while programming with Java. I would like to experiment with a few features and see if any of my ideas work out in practice without breaking Java. 
 
