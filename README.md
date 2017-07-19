@@ -22,3 +22,11 @@ Some of the features I would like to try out:
 
 
 This project has a very simple interpreter, that can interpret a .easy file to a .java file, but it is very limited at the moment.
+
+The current advantage, that a small code like this:
+https://github.com/ZoltanTheHun/easy/blob/master/src/main/resources/easysrc/immutabletriangle.easy
+
+can be used from Java code like this:
+```
+new ImmutableTriangle().(1).b(2).c(3).circumference()
+```
