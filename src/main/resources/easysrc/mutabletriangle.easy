@@ -1,0 +1,10 @@
+package easy;
+mutable class Triangle{
+    int a;
+    int b;
+    int c;
+
+    public circumference(){
+        return a + b + c;   
+    }
+}
