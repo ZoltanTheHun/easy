@@ -39,5 +39,5 @@ class Triangle{
 ```
 can be used from Java code like this:
 ```
-new ImmutableTriangle().(1).b(2).c(3).circumference()
+new ImmutableTriangle().a(1).b(2).c(3).circumference()
 ```
