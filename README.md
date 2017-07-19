@@ -27,7 +27,7 @@ The current advantage, that a small code like this:
 https://github.com/ZoltanTheHun/easy/blob/master/src/main/resources/easysrc/immutabletriangle.easy
 ```
 package easy;
-class Triangle{
+class ImmutableTriangle{
     int a;
     int b;
     int c;
