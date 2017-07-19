@@ -6,7 +6,7 @@ The aim of this project is to draft some of the thoughts that I gathered while p
 
 There are 4 design constraints:
 - Only 1 way interoperability is required: translated **easy** code must be usable from Java, but not the otherway
-- Keep the language similar as similar to Java as possible
+- Keep the language as similar to Java as possible
 - While reducing it as much as possible
 - And to introduce new keywords only when it is absolutely necessary
 
