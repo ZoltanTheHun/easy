@@ -39,14 +39,17 @@ public class Easy {
     private String className;
     
     public static void main(String[] args) throws FileNotFoundException {
-            new Easy().easy();
-            Triangle test = new Triangle().a(3);
-            System.out.println("Circumference: " + new Triangle(test).b(2).c(3).circumference());
+            String immutable = new Easy().easy("easysrc/immutabletriangle.easy");
+            String mutable = new Easy().easy("easysrc/mutabletriangle.easy");
+            System.out.print("Immutable: " + System.lineSeparator() + immutable);
+            System.out.print("Mutable: " + System.lineSeparator() + mutable);
+            MutableTriangle test = new MutableTriangle().a(3);
+          //  System.out.println("Circumference: " + new MutableTriangle(test).b(2).c(3).circumference());
     }
     
-    public void easy() throws FileNotFoundException{
+    public String easy(String path) throws FileNotFoundException{
         ClassLoader classLoader = getClass().getClassLoader();
-	File file = new File(classLoader.getResource("easysrc/immutabletriangle.easy").getFile());
+	File file = new File(classLoader.getResource(path).getFile());
         Scanner sc = new Scanner(file);
         String output = "";
 
@@ -78,7 +81,7 @@ public class Easy {
             output = output + line + System.lineSeparator();
         }
         output = generate(new Scanner(output));
-        System.out.println(output);
+        return output;
     }
     
     private String classDefinition(String line){
@@ -135,9 +138,17 @@ public class Easy {
         String setters = "";
         for(String varName : variables.keySet()){
             String type = variables.get(varName);
-            setters = setters + "public " + className + " " + varName + "(" + type + " " + varName+ "){" + System.lineSeparator() ;
-            setters = setters + "this." + varName + " = " + varName + ";"  + System.lineSeparator();
-            setters = setters + "return this;" + System.lineSeparator();
+            setters = setters + "public " + className + " " + varName + "(" + type + " " + varName+ "){";
+            if(mutable){
+                setters = setters + "this." + varName + " = " + varName + ";";
+                setters = setters + "return this;";
+            } else{
+                setters = setters + System.lineSeparator();
+                setters = setters + className + " copy = new " + className + "(this);" + System.lineSeparator();
+                setters = setters + "copy." + varName + " = " + varName + ";"  + System.lineSeparator();
+                setters = setters + "return copy;";
+            }
+
             setters = setters + "}" + System.lineSeparator();
         }
         return setters;
@@ -147,8 +158,8 @@ public class Easy {
         String getters = "";
         for(String varName : variables.keySet()){
             String type = variables.get(varName);
-            getters = getters + "public " + type + " " + varName + "(){" + System.lineSeparator() ;
-            getters = getters + "return " + varName + ";"  + System.lineSeparator();
+            getters = getters + "public " + type + " " + varName + "(){";
+            getters = getters + "return " + varName + ";";
             getters = getters + "}" + System.lineSeparator();
         }
         return getters;

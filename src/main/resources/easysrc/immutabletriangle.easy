@@ -1,5 +1,5 @@
 package easy;
-class Triangle{
+class ImmutableTriangle{
     int a;
     int b;
     int c;
