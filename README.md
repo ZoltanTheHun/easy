@@ -4,7 +4,8 @@ easy is a Java based programming language.
 
 The aim of this project is to draft some of the thoughts that I gathered while programming with Java. I would like to experiment with a few features and see if any of my ideas work out in practice without breaking Java. 
 
-There are 3 design goals:
+There are 4 design constraints:
+- Only 1 way interoperability is required: translated *easy* code must be usable from Java, but not the otherway
 - Keep the language similar as similar to Java as possible
 - While reducing it as much as possible
 - And to introduce new keywords only when it is absolutely necessary
