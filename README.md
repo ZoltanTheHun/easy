@@ -11,6 +11,7 @@ There are 3 design goals:
 
 Some of the features I would like to try out:
 - classes are always public
+- no new keyword, only classes can and classes must start with capital letter
 - void does not exist, instead of void, the class is used as return type
 - there are no constructors, except a default and a copy constructor provided by the language
 - all variables are private, but they are reachable through public getters/setters
