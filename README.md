@@ -15,7 +15,9 @@ Some of the features I would like to try out:
 - there are no constructors, except a default and a copy constructor provided by the language
 - all variables are private, but they are reachable through public getters/setters
 - setters/getters are automatically generated
-- default immutability, but mutable keyword can allow mutability (but variables can be mutable objects)
+- default Shallow Immutablility
+- mutable keyword can allow mutability 
+- in future true immutable might be introduced with the strict keyword
 
 
 This project has a very simple interpreter, that can interpret a .easy file to a .java file, but it is very limited at the moment.
