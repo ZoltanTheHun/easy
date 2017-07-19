@@ -38,11 +38,11 @@ class ImmutableTriangle{
     }
 }
 ```
-In *easy* this is invoked like this:
+In *easy* this is used like this:
 ```
-ImmutableTriangle().a(1).b(2).c(3).circumference()
+ImmutableTriangle().a(1).b(2).c(3).circumference();
 ```
-can be used from Java code like this:
+In Java this is used like this:
 ```
-new ImmutableTriangle().a(1).b(2).c(3).circumference()
+new ImmutableTriangle().a(1).b(2).c(3).circumference();
 ```
