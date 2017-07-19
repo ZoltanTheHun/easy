@@ -38,6 +38,10 @@ class ImmutableTriangle{
     }
 }
 ```
+In *easy* this is invoked like this:
+```
+ImmutableTriangle().a(1).b(2).c(3).circumference()
+```
 can be used from Java code like this:
 ```
 new ImmutableTriangle().a(1).b(2).c(3).circumference()
