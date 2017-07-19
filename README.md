@@ -25,7 +25,18 @@ This project has a very simple interpreter, that can interpret a .easy file to a
 
 The current advantage, that a small code like this:
 https://github.com/ZoltanTheHun/easy/blob/master/src/main/resources/easysrc/immutabletriangle.easy
+```
+package easy;
+class Triangle{
+    int a;
+    int b;
+    int c;
 
+    public int circumference(){
+        return a + b + c;   
+    }
+}
+```
 can be used from Java code like this:
 ```
 new ImmutableTriangle().(1).b(2).c(3).circumference()
