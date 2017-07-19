@@ -16,3 +16,6 @@ Some of the features I would like to try out:
 - all variables are private, but they are reachable through public getters/setters
 - setters/getters are automatically generated
 - default immutability, but mutable keyword can allow mutability (but variables can be mutable objects)
+
+
+This project has a very simple interpreter, that can interpret a .easy file to a .java file, but it is very limited at the moment.
