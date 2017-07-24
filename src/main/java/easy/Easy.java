@@ -138,8 +138,7 @@ public class Easy {
         String setters = "";
         for(String varName : variables.keySet()){
             String type = variables.get(varName);
-            String sync = mutable ? "synchronized " : "";
-            setters = setters + "public " + sync + className + " " + varName + "(" + type + " " + varName+ "){";
+            setters = setters + "public " + className + " " + varName + "(" + type + " " + varName+ "){";
             if(mutable){
                 setters = setters + "this." + varName + " = " + varName + ";";
                 setters = setters + "return this;";
@@ -159,8 +158,7 @@ public class Easy {
         String getters = "";
         for(String varName : variables.keySet()){
             String type = variables.get(varName);
-            String sync = mutable ? "synchronized " : ""; 
-            getters = getters + "public " + sync + type + " " + varName + "(){";
+            getters = getters + "public " + type + " " + varName + "(){";
             getters = getters + "return " + varName + ";";
             getters = getters + "}" + System.lineSeparator();
         }

@@ -6,13 +6,13 @@ this.a = copy.a;
 this.b = copy.b;
 this.c = copy.c;
 }
-public synchronized MutableTriangle a(int a){this.a = a;return this;}
-public synchronized MutableTriangle b(int b){this.b = b;return this;}
-public synchronized MutableTriangle c(int c){this.c = c;return this;}
+public MutableTriangle a(int a){this.a = a;return this;}
+public MutableTriangle b(int b){this.b = b;return this;}
+public MutableTriangle c(int c){this.c = c;return this;}
 
-public synchronized int a(){return a;}
-public synchronized int b(){return b;}
-public synchronized int c(){return c;}
+public int a(){return a;}
+public int b(){return b;}
+public int c(){return c;}
 
 private int a; 
 private int b; 
